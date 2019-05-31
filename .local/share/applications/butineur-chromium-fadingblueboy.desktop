@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Fading Blue Boy
+Exec=/usr/bin/chromium-browser --profile-directory="Profile_FadingBlueBoy"
+Icon=avatar_generic_aqua.png
+Categories=Network;
+StartupWMClass=chromium-fadingblueboy

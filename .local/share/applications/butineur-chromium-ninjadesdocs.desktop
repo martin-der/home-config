@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Ninja Des Docs
+Exec=/usr/bin/chromium-browser --profile-directory="Profile_NinjaDesDocs"
+Icon=avatar_ninja.png
+Categories=Network; 
+StartupWMClass=chromium-ninjadesdocs

@@ -1,0 +1,16 @@
+
+# alias b='function _mdu_do_b(){ b "$@"; history -d $(($HISTCMD - 1)) ; unset -f _mdu_do_b ; }; _mdu_do_b'
+# alias b\?="b \?"
+
+if test "x$1" = "x?"; then
+	if test "x${MDU_BLIND_SHELL}" = "x1" ; then 
+		echo "^^"
+		exit 0
+	fi
+	exit 1
+fi
+
+echo "(--)"
+HISTFILE=/dev/null MDU_BLIND_SHELL=1 bash "$@"
+echo "(Oo)"
+

@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Fantôme blanc
+Exec=/usr/bin/chromium-browser --profile-directory="Profile_FantomeBlanc"
+Icon=avatar_generic.png
+Categories=Network;
+StartupWMClass=chromium-whiteghost

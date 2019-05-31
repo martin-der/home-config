@@ -1,0 +1,7 @@
+
+[Default Applications]
+text/html=butineur-chromium-jaunyhalliday.desktop
+x-scheme-handler/http=butineur-chromium-jaunyhalliday.desktop
+x-scheme-handler/https=butineur-chromium-jaunyhalliday.desktop
+x-scheme-handler/about=butineur-chromium-jaunyhalliday.desktop
+x-scheme-handler/unknown=butineur-chromium-jaunyhalliday.desktop

@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Waam (I)
+Exec=/usr/bin/chromium-browser --incognito --profile-directory="Profile_Waam"
+Icon=avatar_alien.png
+Categories=Network;
+StartupWMClass=chromium-waam

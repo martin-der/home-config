@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Capt'n Red
+Exec=/usr/bin/chromium-browser --profile-directory="Profile_CaptNRed"
+Icon=avatar_generic_red.png
+Categories=Network;
+StartupWMClass=chromium-captnred

@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Purplix
+Exec=/usr/bin/chromium-browser --profile-directory="Profile_Purplix"
+Icon=avatar_generic_purple.png
+Categories=Network;
+StartupWMClass=chromium-purplix

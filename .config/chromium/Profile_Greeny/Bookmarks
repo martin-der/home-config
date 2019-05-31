@@ -1,0 +1,154 @@
+{
+   "checksum": "aeab30b530ba35eaa5da4ce6523a8398",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "children": [ {
+               "date_added": "13104627436939302",
+               "id": "6",
+               "meta_info": {
+                  "last_visited_desktop": "13203802629729918"
+               },
+               "name": "Dilbert",
+               "type": "url",
+               "url": "http://dilbert.com/"
+            }, {
+               "date_added": "13104627470525665",
+               "id": "8",
+               "meta_info": {
+                  "last_visited_desktop": "13203802629747611"
+               },
+               "name": "Cyanide & Happiness",
+               "type": "url",
+               "url": "http://explosm.net/"
+            }, {
+               "date_added": "13104627524694365",
+               "id": "9",
+               "meta_info": {
+                  "last_visited_desktop": "13203802629762936"
+               },
+               "name": "Oglaf",
+               "type": "url",
+               "url": "http://oglaf.com/"
+            }, {
+               "date_added": "13104627647945850",
+               "id": "10",
+               "meta_info": {
+                  "last_visited_desktop": "13203802629778226"
+               },
+               "name": "Poorly Drawn Lines",
+               "type": "url",
+               "url": "http://poorlydrawnlines.com/"
+            }, {
+               "date_added": "13104627767525384",
+               "id": "11",
+               "meta_info": {
+                  "last_visited_desktop": "13203802629795541"
+               },
+               "name": "The Perry Bible Fellowship",
+               "type": "url",
+               "url": "http://pbfcomics.com/"
+            }, {
+               "date_added": "13104627782355052",
+               "id": "12",
+               "meta_info": {
+                  "last_visited_desktop": "13203802629811600"
+               },
+               "name": "xkcd",
+               "type": "url",
+               "url": "http://xkcd.com/"
+            }, {
+               "date_added": "13104627819432035",
+               "id": "13",
+               "meta_info": {
+                  "last_visited_desktop": "13203803054607574"
+               },
+               "name": "The Best Page In The Universe",
+               "type": "url",
+               "url": "http://maddox.xmission.com/"
+            }, {
+               "date_added": "13104627965161730",
+               "id": "14",
+               "meta_info": {
+                  "last_visited_desktop": "13203802629846072"
+               },
+               "name": "Saturday Morning Breakfast Cereal",
+               "type": "url",
+               "url": "http://www.smbc-comics.com/"
+            }, {
+               "date_added": "13104627989113435",
+               "id": "15",
+               "meta_info": {
+                  "last_visited_desktop": "13203802629865190"
+               },
+               "name": "Three Word Phrase",
+               "type": "url",
+               "url": "http://threewordphrase.com/"
+            }, {
+               "date_added": "13104628077608980",
+               "id": "16",
+               "meta_info": {
+                  "last_visited_desktop": "13203802629883610"
+               },
+               "name": "Deathbulge",
+               "type": "url",
+               "url": "http://www.deathbulge.com/comics"
+            }, {
+               "date_added": "13104628132811366",
+               "id": "17",
+               "meta_info": {
+                  "last_visited_desktop": "13203802629897975"
+               },
+               "name": "Ultimex",
+               "type": "url",
+               "url": "http://ultimex.over-blog.com/"
+            }, {
+               "date_added": "13142969355926440",
+               "id": "23",
+               "meta_info": {
+                  "last_visited_desktop": "13203802629912739"
+               },
+               "name": "GLORY OWL",
+               "type": "url",
+               "url": "http://gloryowlcomix.blogspot.fr/"
+            }, {
+               "date_added": "13177272452742158",
+               "id": "25",
+               "meta_info": {
+                  "last_visited_desktop": "13203802629932917"
+               },
+               "name": "Sufficiently Remarkable",
+               "type": "url",
+               "url": "http://sufficientlyremarkable.com/"
+            } ],
+            "date_added": "13104627451441755",
+            "date_modified": "13177272452742158",
+            "id": "7",
+            "name": "fun",
+            "type": "folder"
+         } ],
+         "date_added": "13104626896555193",
+         "date_modified": "13104627436939302",
+         "id": "1",
+         "name": "Barre de favoris",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13104626896555209",
+         "date_modified": "0",
+         "id": "2",
+         "name": "Autres favoris",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13104626896555211",
+         "date_modified": "0",
+         "id": "3",
+         "name": "Favoris sur mobile",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

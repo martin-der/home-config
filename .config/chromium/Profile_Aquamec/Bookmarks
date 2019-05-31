@@ -1,0 +1,117 @@
+{
+   "checksum": "006d878ea478688f92e8e83966779d9d",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13112269470045294",
+            "id": "2",
+            "meta_info": {
+               "last_visited_desktop": "13165272301567500"
+            },
+            "name": "JSON Editor",
+            "type": "url",
+            "url": "http://www.jsoneditoronline.org/"
+         }, {
+            "date_added": "13112290102848250",
+            "id": "3",
+            "name": "Regex 101",
+            "type": "url",
+            "url": "https://regex101.com/"
+         }, {
+            "date_added": "13130105804336532",
+            "id": "4",
+            "name": "StackEdit",
+            "type": "url",
+            "url": "https://stackedit.io/"
+         }, {
+            "date_added": "13130863858096583",
+            "id": "5",
+            "name": "XSLT",
+            "type": "url",
+            "url": "http://www.online-toolz.com/tools/xslt-transformation.php"
+         }, {
+            "date_added": "13145375116839556",
+            "id": "6",
+            "name": "Android Asset Studio - Launcher icon generator",
+            "type": "url",
+            "url": "https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html#foreground.type=image&foreground.space.trim=1&foreground.space.pad=0.05&foreColor=rgba(96%2C%20125%2C%20139%2C%200)&backColor=rgb(68%2C%20138%2C%20255)&crop=0&backgroundShape=none&effects=none&name=ic_launcher"
+         }, {
+            "date_added": "13165272557733864",
+            "id": "7",
+            "meta_info": {
+               "last_visited_desktop": "13173530956798741"
+            },
+            "name": "JSON Formatter & Validator",
+            "type": "url",
+            "url": "https://jsonformatter.curiousconcept.com/"
+         }, {
+            "date_added": "13165872689527299",
+            "id": "8",
+            "meta_info": {
+               "last_visited_desktop": "13165872689527471"
+            },
+            "name": "Base64 Image Encoder",
+            "type": "url",
+            "url": "https://www.base64-image.de/"
+         }, {
+            "date_added": "13171809946552767",
+            "id": "9",
+            "meta_info": {
+               "last_visited_desktop": "13171809946552956"
+            },
+            "name": "JavaScript beautifier",
+            "type": "url",
+            "url": "http://jsbeautifier.org/"
+         }, {
+            "date_added": "13174839393978316",
+            "id": "10",
+            "meta_info": {
+               "last_visited_desktop": "13174839393978534"
+            },
+            "name": "Online Image Vectorizer",
+            "type": "url",
+            "url": "https://www.vectorizer.io/"
+         }, {
+            "date_added": "13188926587324949",
+            "id": "11",
+            "meta_info": {
+               "last_visited_desktop": "13198767908946681"
+            },
+            "name": "SQL Formatter",
+            "type": "url",
+            "url": "https://www.freeformatter.com/sql-formatter.html"
+         }, {
+            "date_added": "13189788155824163",
+            "id": "12",
+            "meta_info": {
+               "last_visited_desktop": "13198757355555236"
+            },
+            "name": "XML Formatter",
+            "type": "url",
+            "url": "https://www.freeformatter.com/xml-formatter.html"
+         } ],
+         "date_added": "13112269279955890",
+         "date_modified": "13189788155824163",
+         "id": "1",
+         "name": "Barre de favoris",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13112269279955897",
+         "date_modified": "0",
+         "id": "13",
+         "name": "Autres favoris",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13112269279955908",
+         "date_modified": "0",
+         "id": "14",
+         "name": "Favoris sur mobile",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

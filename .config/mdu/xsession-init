@@ -1,0 +1,108 @@
+#/bin/sh
+
+# This script is not automatically called.
+# Therefore it needs to be invoked by some X init script ( like '.xinitrx', '.xsession' or '.xprofile' )
+
+# Sometimes needed...
+#xrdb -merge ~/.Xresources
+
+icon_error="/usr/share/icons/Lubuntu/actions/24/error.svg"
+icon_error="/usr/share/icons/Humanity/status/32/dialog-warning.svg"
+
+isTempDir=0
+TEMP_DIR=`mktemp --suffix .mdu-xsession -d` && isTempDir=1
+trap cleanAll EXIT
+function cleanAll() {
+	rm -rf "$TEMP_DIR"
+}
+
+
+disableTrackpadTap() {
+	which synclient 2>/dev/null || return 0 
+	synclient MaxTapTime=0
+}
+
+functions="disableTrackpadTap"
+
+
+execute() {
+	executable="$1"
+	name="$2"
+
+	EXECUTABLE_TEMP_DIR="$TEMP_DIR/${name}"
+	[ $isFunctionExecution -eq 0 ] && {
+		[ $isTempDir -ne 0 ] && mkdir "${EXECUTABLE_TEMP_DIR}" && { 
+			sh "${executable}" 2> "${EXECUTABLE_TEMP_DIR}/err" > "${EXECUTABLE_TEMP_DIR}/out"
+			script_return=$?
+		} || {
+			sh "${executable}"
+			script_return=$?
+		}
+	} || {
+		[ $isTempDir -ne 0 ] && mkdir "${EXECUTABLE_TEMP_DIR}" && { 
+			"${executable}" 2> "${EXECUTABLE_TEMP_DIR}/err" > "${EXECUTABLE_TEMP_DIR}/out"
+			script_return=$?
+		} || {
+			"${executable}"
+			script_return=$?
+		}
+	}
+
+	[ $script_return -ne 0 ] && {
+		hasError=1
+		[ $notifiedFirstError -eq 0 ] && {
+			echo "Some errors occured..."
+			notifiedFirstError=1
+		} || {
+			failedExecutions="${failedExecutions}\n"
+		}
+		failedExecutions="${failedExecutions}+ ${name}"
+		echo "Script '${name}' returned $script_return"
+		[ $isTempDir -ne 0 ] && {
+			:
+			#echo "Err:"
+			#cat  "${EXECUTABLE_TEMP_DIR}/err" 
+			#echo "Out:"
+			#cat  "${EXECUTABLE_TEMP_DIR}/out"
+		}
+	} || {
+		[ $isTempDir -ne 0 ] && rm -rf "${EXECUTABLE_TEMP_DIR}"
+	}
+}
+
+
+notifiedFirstError=0
+failedExecutions=""
+hasError=0
+
+isFunctionExecution=1
+for fuunction in $functions; do
+	execute "$fuunction" "$fuunction"
+done
+
+isFunctionExecution=0
+HOLDER_DIRECTORY="$HOME/.config/mdu/xsession-init.d"
+# execute all configuration files in xsession-init.d directory
+if [ -d "$HOLDER_DIRECTORY" ]; then
+	for config_file in "$HOLDER_DIRECTORY"/* ; do
+		name="$(basename "$config_file")"
+		test "x${config_file:0:1}" != "x." || continue
+		test -f "${config_file}" -a -r "${config_file}" || continue
+		test -x "${config_file}" || continue
+		execute "$config_file" "$name"
+	done
+	
+fi
+
+[ $hasError -ne 0 ] && {
+	[ $isTempDir -ne 0 ] && {
+		find "$TEMP_DIR" -size 0 -exec rm '{}' \;
+		zipname="$HOME/mdu-xsession-start-errors-$(date +%Y-%d-%d-%H%M-%N).zip"
+		( 
+			cd "$(dirname "$TEMP_DIR")" && zip -q -r "$zipname" "$(basename "$TEMP_DIR")"
+		)
+		notify-send -i "$icon_error" "Initialisation Error" "Following executions failed:\n${failedExecutions}\nSee '$zipname'"
+	}
+	exit 1
+} || exit 0
+

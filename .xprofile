@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+${HOME}/.config/mdu/xsession-init
+

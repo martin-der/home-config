@@ -1,0 +1,10 @@
+
+startup_message off
+
+altscreen on
+
+caption splitonly "%{= rk}%{+b Gk}%H%{gk}  %t  %= %c"
+
+hardstatus off
+
+
