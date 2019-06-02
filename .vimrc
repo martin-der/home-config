@@ -248,6 +248,7 @@ function! MDUFirstInitVim()
 	let disabling_file = directory . '/no-manager'
 
 	if ! empty(glob(autoload_dir.'/'.main_file_name))
+		call s:MDUDeclarePlugins()
 		return 1
 	endif
 
