@@ -218,6 +218,8 @@ function! s:MDUDeclarePlugins()
 
 		Plug 'huawenyu/neogdb.vim'
 
+		Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+		
 		call ManagerExtrasVimPlug()
 
 		Plug 'https://github.com/powerline/fonts.git', { 'do': './install.sh' }
@@ -226,7 +228,7 @@ function! s:MDUDeclarePlugins()
 endfunction
 
 function! ManagerExtrasVimPlug()
-"	Plug 'mlkmlkmlk/sqdsdfsf'
+	Plug 'idanarye/vim-vebugger'
 endfunction
 
 function! MDUFirstInitVim()
