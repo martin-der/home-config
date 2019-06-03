@@ -7,22 +7,6 @@
 
 
 
-""" Guardian
-" For some reason ( behind my understanding ) the HI command ( provided by a plugin )
-" is not declared yet when this colorscheme is called from 'vimrc'.
-" As a workaround, if HI is not found then the reading is scheduled at VimEnter event.
-" This is done once to avoid loops.
-
-let s:never_checked_HI = 1
-
-if s:never_checked_HI
-	let s:never_checked_HI = 0
-	if exists (':HI') == 0
-		autocmd VimEnter * colorscheme martin
-		finish
-	endif
-endif
-
 if exists (':HI') == 0
 	echohl  error | echom 'Could not load martin colorsheme : HI command is missing' | echohl normal
 	finish
