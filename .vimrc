@@ -5,7 +5,6 @@ set t_Co=256
 " nvim true color
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-colorscheme martin
 
 let g:ediyalam_themes = [ 'martin', 'koehler', 'peachpuff' ]
 let g:ediyalam_airline_themes = [ 'light', 'murmur', 'raven', 'silver', 'ubaryd', 'wombat' ]
@@ -449,6 +448,7 @@ command CurrentDiff w !diff % -
 " automatic 'chmod +x'
 "au BufWritePost * if getline(1) =~ "^#!" | if getline(1) =~ "/bin/" | silent !chmod +x <afile> | endif | endif
 
+au VimEnter * colorscheme martin
 
 let g:indentLine_color_term = 239
 let g:indentLine_color_gui = '#09AA08'
