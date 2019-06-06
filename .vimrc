@@ -174,7 +174,7 @@ function! s:MDUDeclarePlugins()
 		"Plug 'https://github.com/lornix/vim-scrollbar.git'
 		"Plug 'lornix/vim-scrollbar' "desativé pour l instant
 
-		"Plug 'https://github.com/Valloric/YouCompleteMe.git'
+		Plug 'https://github.com/Valloric/YouCompleteMe.git', { 'do' : './install.py --clang-completer' }
 
 		Plug 'https://github.com/majutsushi/tagbar.git'
 		"Plug 'https://github.com/xolox/vim-easytags.git'
@@ -365,10 +365,12 @@ let g:airline_section_y="%{airline#util#wrap(airline#parts#ffenc(),0)}"
 let g:gitgutter_map_keys = 0
 "let g:gitgutter_diff_args = '-w'
 
+let g:ycm_confirm_extra_conf=1
+let g:ycm_extra_conf_globlist = ['~/dev/prog/*','!~/*']
 
 
 """ *******************
-""" * Make VIM an IDE *
+""" *     Ediyalam    *
 """ *******************
 
 
