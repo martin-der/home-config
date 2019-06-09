@@ -365,6 +365,11 @@ let g:airline_section_y="%{airline#util#wrap(airline#parts#ffenc(),0)}"
 let g:gitgutter_map_keys = 0
 "let g:gitgutter_diff_args = '-w'
 
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll|class|o)$'
+  \ }
+
 let g:ycm_confirm_extra_conf=1
 let g:ycm_extra_conf_globlist = ['~/dev/prog/*','!~/*']
 
