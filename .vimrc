@@ -186,7 +186,7 @@ function! s:MDUDeclarePlugins()
 		" Shows indentation, tabs et spaces
 		"Plug 'https://github.com/Yggdroot/indentLine.git'
 		
-		Plug 'tpope/vim-dispatch'
+		"Plug 'tpope/vim-dispatch'
 
 		Plug 'https://github.com/scrooloose/syntastic.git'
 
@@ -205,24 +205,28 @@ function! s:MDUDeclarePlugins()
 		Plug 'https://github.com/t9md/vim-choosewin.git'
 		Plug 'https://github.com/wesQ3/vim-windowswap.git'
 
+		Plug 'ericbn/vim-relativize'
 
 		" Plugin outside ~/.vim/plugged with post-update hook
 		"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 
-		Plug 'https://github.com/martin-der/hih.git'
+		Plug 'martin-der/hih'
 
-		Plug '~/prog/vim/ediyalam_'
+		Plug 'vim-scripts/ParseJSON'
+
+		Plug '~/prog/vim/ediyalam'
 
 		Plug 'posva/vim-vue'
 
-		Plug 'huawenyu/neogdb.vim'
+		"Plug 'huawenyu/neogdb.vim'
 
 		Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 		
 		call ManagerExtrasVimPlug()
 
 		Plug 'https://github.com/powerline/fonts.git', { 'do': './install.sh' }
-	 
+
+		Plug 'fholgado/minibufexpl.vim'
 		call plug#end()
 endfunction
 
