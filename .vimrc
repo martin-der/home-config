@@ -390,45 +390,38 @@ let g:ediyalam_visual_tab_width=4
 let g:ediyalam_configure_plugins = [ 'airline' ]
 
 
-nnoremap <F12> :EdiyalamStart('')<CR>
 
 nnoremap <silent> <F3> :NERDTreeTabsToggle<CR>
 nnoremap <silent> <F4> :Tagbar<CR>
-nnoremap <silent> <F5> :call ProcAdd()<CR>
-
-nmap <silent> <S-Tab> :EdiyalamFindResource<CR>
-imap <silent> <S-Tab> :EdiyalamComplete<CR>
-nmap <silent> <F6> :EdiyalamFindResource<CR>
-
-nnoremap <F9> :call ProcShow()<CR>
-
-nnoremap <silent> <F8> :echo "Build…"<CR>
-
-nmap <silent><F2> :EdiyalamToggleMouse<CR>
-imap <silent><F2> :EdiyalamToggleMouse<CR>
-
-" A TESTER
-"imap <silent><F12> :let &mouse=(&mouse == "a"?"":"a")<CR>:call ShowMouseMode()<CR>
 
 
-nnoremap <silent><F7>m :EdiyalamToggleTextMarkers<CR>
-nnoremap <silent><F7>l :EdiyalamToggleLineNumbers<CR>
-nnoremap <silent><F7>g :EdiyalamToggleGutter<CR>
-nnoremap <silent><F7>ct :EdiyalamToggleColorTheme<CR> 
-nnoremap <silent><F7>cf :EdiyalamToggleColorFlavor<CR>
-nnoremap <silent><F7>ca :EdiyalamToggleColorThemeAirline<CR>
-nnoremap <silent><F7>t :EdiyalamToggleTabWidth<CR>
-nnoremap <silent><F7>w :EdiyalamToggleLineWrap<CR>
-inoremap <silent><F7>m <ESC>:EdiyalamToggleTextMarkers<CR>i
-inoremap <silent><F7>l <ESC>:EdiyalamToggleLineNumbers<CR>i
-inoremap <silent><F7>g <ESC>:EdiyalamToggleGutter<CR>i
-inoremap <silent><F7>ct <ESC>:EdiyalamToggleColorTheme<CR>i
-inoremap <silent><F7>cf <ESC>:EdiyalamToggleColorFlavor<CR>i
-inoremap <silent><F7>ca <ESC>:EdiyalamToggleColorThemeAirline<CR>i
-inoremap <silent><F7>t <ESC>:EdiyalamToggleTabWidth<CR>i
-inoremap <silent><F7>w <ESC>:EdiyalamToggleLineWrap<CR>i
+"nnoremap <silent> <F9> :echo "Build…"<CR>
+
+nnoremap <silent><F1>m :EdiyalamShowKeymap<CR>
+
+inoremap <silent><F2>s :EdiyalamToggleMouse<CR>
+nnoremap <silent><F2>m :EdiyalamToggleTextMarkers<CR>
+nnoremap <silent><F2>l :EdiyalamToggleLineNumbers<CR>
+nnoremap <silent><F2>g :EdiyalamToggleGutter<CR>
+nnoremap <silent><F2>ct :EdiyalamToggleColorTheme<CR> 
+nnoremap <silent><F2>cf :EdiyalamToggleColorFlavor<CR>
+nnoremap <silent><F2>ca :EdiyalamToggleColorThemeAirline<CR>
+nnoremap <silent><F2>t :EdiyalamToggleTabWidth<CR>
+nnoremap <silent><F2>w :EdiyalamToggleLineWrap<CR>
+inoremap <silent><F2>m <ESC>:EdiyalamToggleTextMarkers<CR>i
+inoremap <silent><F2>l <ESC>:EdiyalamToggleLineNumbers<CR>i
+inoremap <silent><F2>g <ESC>:EdiyalamToggleGutter<CR>i
+inoremap <silent><F2>ct <ESC>:EdiyalamToggleColorTheme<CR>i
+inoremap <silent><F2>cf <ESC>:EdiyalamToggleColorFlavor<CR>i
+inoremap <silent><F2>ca <ESC>:EdiyalamToggleColorThemeAirline<CR>i
+inoremap <silent><F2>t <ESC>:EdiyalamToggleTabWidth<CR>i
+inoremap <silent><F2>w <ESC>:EdiyalamToggleLineWrap<CR>i
 
 
+noremap <F5> :EdiyalamDebugStepIn<cr>
+noremap <F6> :EdiyalamDebugStepOver<cr>
+noremap <F7> :EdiyalamDebugStepOut<cr>
+noremap <F8> :EdiyalamDebugStepContinue<cr>
 
 " ----------------------------------------------------------------
 if &diff
