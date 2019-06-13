@@ -214,7 +214,7 @@ function! s:MDUDeclarePlugins()
 
 		Plug 'vim-scripts/ParseJSON'
 
-		Plug '~/prog/vim/ediyalam'
+		Plug 'https://bitbucket.com/martin-der/ediyalam.git'
 
 		Plug 'posva/vim-vue'
 
