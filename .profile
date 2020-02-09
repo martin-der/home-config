@@ -55,5 +55,10 @@ fi
 alias b='function _mdu_do_b(){ b "$@"; history -d $(($HISTCMD - 1)) ; unset -f _mdu_do_b ; }; _mdu_do_b'
 alias b\?="b \?"
 
-alias npm-exec='PATH=$(npm bin):$PATH'
-
+# Configuration of NPM local packages
+NPM_PACKAGES="$HOME/.cache/npm/packages"
+PATH="$PATH:$NPM_PACKAGES/bin"
+export PATH
+#MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+#NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+#export NODE_PATH
