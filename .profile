@@ -52,6 +52,9 @@ if [ -d "$HOLDER_DIRECTORY" ]; then
 	done
 fi
 
+
+alias svim='sudo -E vim'
+
 alias b='function _mdu_do_b(){ b "$@"; history -d $(($HISTCMD - 1)) ; unset -f _mdu_do_b ; }; _mdu_do_b'
 alias b\?="b \?"
 
