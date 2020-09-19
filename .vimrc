@@ -2,6 +2,11 @@ set nocompatible | filetype indent plugin on | syn on
 
 set t_Co=256
 
+
+" esc in insert mode and command mode
+inoremap kj <esc>
+cnoremap kj <C-C>
+
 " nvim true color
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
