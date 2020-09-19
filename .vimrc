@@ -53,6 +53,8 @@ set wildmenu
 set list
 set listchars=eol:↲,tab:▎\ ,extends:…,precedes:…
 
+set mouse=a
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => 'classic' ( Windows,KDE,...) Key mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -442,15 +444,15 @@ cmap w!! %!sudo tee > /dev/null %
 command CurrentDiff w !diff % -
 
 " ----------------------------------------------------------------
-
+	
 ":au FocusLost * :set number
 ":au FocusGained * :set relativenumber
 
-"autocmd InsertEnter * :set number
-"autocmd InsertLeave * :set relativenumber
+autocmd InsertEnter * :set norelativenumber
+autocmd InsertLeave * :set relativenumber
 
-" automatic 'chmod +x'
-"au BufWritePost * if getline(1) =~ "^#!" | if getline(1) =~ "/bin/" | silent !chmod +x <afile> | endif | endif
+" automaticaly set filetype as shell where shebang is found
+au BufWritePost * if getline(1) =~ "^#!" | if &filetype = '' | silent set filetype=sh | endif | endif
 
 au VimEnter * colorscheme martin
 
@@ -466,4 +468,7 @@ map ,hi :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 
 " Séléctionne le mot pour recherche au double click de la souris
 noremap <2-LeftMouse> *
+
+set mouse=
+let g:airline_section_a='%#__accent_bold#%{airline#util#wrap(airline#parts#mode(),0)}%#__restore__#%{airline#util#append(airline#parts#crypt(),0)}%{airline#util#append(airline#parts#paste(),0)}%{airline#util#append(airline#extensions#keymap#status(),0)}%{airline#util#append(airline#parts#spell(),0)}%{airline#util#append("",0)}%{airline#util#append("",0)}%{airline#util#append(airline#parts#iminsert(),0)}---%{airline#util#wrap(airline#parts#mode(),0)}'
 
