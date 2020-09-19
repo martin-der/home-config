@@ -1,134 +1,191 @@
 {
-   "checksum": "aeab30b530ba35eaa5da4ce6523a8398",
+   "checksum": "6adb937ac66646d5d3dc95040016265e",
    "roots": {
       "bookmark_bar": {
          "children": [ {
             "children": [ {
                "date_added": "13104627436939302",
+               "guid": "0bd9fdca-75c0-4a77-bf6d-d91832ace112",
                "id": "6",
                "meta_info": {
-                  "last_visited_desktop": "13203802629729918"
+                  "last_visited_desktop": "13205692290034611"
                },
                "name": "Dilbert",
                "type": "url",
                "url": "http://dilbert.com/"
             }, {
                "date_added": "13104627470525665",
+               "guid": "975f5aa0-8de4-4790-a3a3-7216ad2e9086",
                "id": "8",
                "meta_info": {
-                  "last_visited_desktop": "13203802629747611"
+                  "last_visited_desktop": "13205692290054754"
                },
                "name": "Cyanide & Happiness",
                "type": "url",
                "url": "http://explosm.net/"
             }, {
                "date_added": "13104627524694365",
+               "guid": "d3109f95-872b-4d77-ae2c-051251a9a196",
                "id": "9",
                "meta_info": {
-                  "last_visited_desktop": "13203802629762936"
+                  "last_visited_desktop": "13205692290070658"
                },
                "name": "Oglaf",
                "type": "url",
                "url": "http://oglaf.com/"
             }, {
                "date_added": "13104627647945850",
+               "guid": "377b6da1-e06b-4707-a441-0699930bd465",
                "id": "10",
                "meta_info": {
-                  "last_visited_desktop": "13203802629778226"
+                  "last_visited_desktop": "13205692290087349"
                },
                "name": "Poorly Drawn Lines",
                "type": "url",
                "url": "http://poorlydrawnlines.com/"
             }, {
                "date_added": "13104627767525384",
+               "guid": "8f7ccde5-3421-4048-93df-a7566ef1915f",
                "id": "11",
                "meta_info": {
-                  "last_visited_desktop": "13203802629795541"
+                  "last_visited_desktop": "13205692290110689"
                },
                "name": "The Perry Bible Fellowship",
                "type": "url",
                "url": "http://pbfcomics.com/"
             }, {
                "date_added": "13104627782355052",
+               "guid": "475ea5ce-e91c-428b-9290-3fceb7c4e3ad",
                "id": "12",
                "meta_info": {
-                  "last_visited_desktop": "13203802629811600"
+                  "last_visited_desktop": "13205692290128150"
                },
                "name": "xkcd",
                "type": "url",
                "url": "http://xkcd.com/"
             }, {
                "date_added": "13104627819432035",
+               "guid": "74d601a1-ac67-49b5-82f9-f3b57374ed6a",
                "id": "13",
                "meta_info": {
-                  "last_visited_desktop": "13203803054607574"
+                  "last_visited_desktop": "13205692290148719"
                },
                "name": "The Best Page In The Universe",
                "type": "url",
                "url": "http://maddox.xmission.com/"
             }, {
                "date_added": "13104627965161730",
+               "guid": "c0819efa-07f7-4d8f-8e4a-4eed38706448",
                "id": "14",
                "meta_info": {
-                  "last_visited_desktop": "13203802629846072"
+                  "last_visited_desktop": "13205692290167351"
                },
                "name": "Saturday Morning Breakfast Cereal",
                "type": "url",
                "url": "http://www.smbc-comics.com/"
             }, {
                "date_added": "13104627989113435",
+               "guid": "f0f13038-4e0a-4526-a4f6-484a146299f0",
                "id": "15",
                "meta_info": {
-                  "last_visited_desktop": "13203802629865190"
+                  "last_visited_desktop": "13205692290185789"
                },
                "name": "Three Word Phrase",
                "type": "url",
                "url": "http://threewordphrase.com/"
             }, {
                "date_added": "13104628077608980",
+               "guid": "dc64b7fc-3f54-436d-8637-4af3378383fd",
                "id": "16",
                "meta_info": {
-                  "last_visited_desktop": "13203802629883610"
+                  "last_visited_desktop": "13205692290201597"
                },
                "name": "Deathbulge",
                "type": "url",
                "url": "http://www.deathbulge.com/comics"
             }, {
                "date_added": "13104628132811366",
+               "guid": "3a78bcda-9ec1-4df1-ab36-ea0987d6a7e9",
                "id": "17",
                "meta_info": {
-                  "last_visited_desktop": "13203802629897975"
+                  "last_visited_desktop": "13205692290218196"
                },
                "name": "Ultimex",
                "type": "url",
                "url": "http://ultimex.over-blog.com/"
             }, {
                "date_added": "13142969355926440",
+               "guid": "c41ae84c-4176-4962-8424-f045be8acaed",
                "id": "23",
                "meta_info": {
-                  "last_visited_desktop": "13203802629912739"
+                  "last_visited_desktop": "13205692290239003"
                },
                "name": "GLORY OWL",
                "type": "url",
                "url": "http://gloryowlcomix.blogspot.fr/"
             }, {
                "date_added": "13177272452742158",
+               "guid": "cb74d60c-a172-4abf-b969-f275f083649b",
                "id": "25",
                "meta_info": {
-                  "last_visited_desktop": "13203802629932917"
+                  "last_visited_desktop": "13205692290263335"
                },
                "name": "Sufficiently Remarkable",
                "type": "url",
                "url": "http://sufficientlyremarkable.com/"
+            }, {
+               "date_added": "13218380813040346",
+               "guid": "8e24d1c5-4cfd-439c-8e5f-5cb2099d1d79",
+               "id": "27",
+               "name": "Dogmo Comics",
+               "type": "url",
+               "url": "http://dogmodog.com/"
+            }, {
+               "date_added": "13219071427334359",
+               "guid": "5c7926fa-19aa-4c52-a337-435a58ed78cf",
+               "id": "29",
+               "name": "Frazz",
+               "type": "url",
+               "url": "https://www.gocomics.com/frazz"
+            }, {
+               "date_added": "13219085310449124",
+               "guid": "a2cb909d-aa0b-4e53-a4eb-cc10c55bb2b5",
+               "id": "30",
+               "name": "Frazz - en cours",
+               "type": "url",
+               "url": "https://www.gocomics.com/frazz/2001/11/30"
+            }, {
+               "date_added": "13220847298521883",
+               "guid": "b5270dcb-2e54-44d6-af72-c4096f73e002",
+               "id": "34",
+               "name": "StoneToss",
+               "type": "url",
+               "url": "http://stonetoss.com/"
+            }, {
+               "date_added": "13229371711434302",
+               "guid": "f137aa06-3dd4-41f9-b59c-93e4bdd12ca4",
+               "id": "36",
+               "name": "Will Save World For Gold",
+               "type": "url",
+               "url": "http://willsaveworldforgold.com/"
+            }, {
+               "date_added": "13234631702139631",
+               "guid": "b3a7e7f4-a0b7-4921-945a-da58104a6688",
+               "id": "38",
+               "name": "Get Fuzzy | current",
+               "type": "url",
+               "url": "https://www.gocomics.com/getfuzzy/2006/10/09"
             } ],
             "date_added": "13104627451441755",
-            "date_modified": "13177272452742158",
+            "date_modified": "13234631702139631",
+            "guid": "ec8d17c1-441e-4af8-a9a7-43ad6bcfed59",
             "id": "7",
             "name": "fun",
             "type": "folder"
          } ],
          "date_added": "13104626896555193",
-         "date_modified": "13104627436939302",
+         "date_modified": "13220847320507687",
+         "guid": "00000000-0000-4000-a000-000000000002",
          "id": "1",
          "name": "Barre de favoris",
          "type": "folder"
@@ -136,7 +193,8 @@
       "other": {
          "children": [  ],
          "date_added": "13104626896555209",
-         "date_modified": "0",
+         "date_modified": "13220847298521883",
+         "guid": "00000000-0000-4000-a000-000000000003",
          "id": "2",
          "name": "Autres favoris",
          "type": "folder"
@@ -145,6 +203,7 @@
          "children": [  ],
          "date_added": "13104626896555211",
          "date_modified": "0",
+         "guid": "00000000-0000-4000-a000-000000000004",
          "id": "3",
          "name": "Favoris sur mobile",
          "type": "folder"
