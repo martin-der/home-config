@@ -15,6 +15,8 @@ let g:ediyalam_themes = [ 'martin', 'koehler', 'peachpuff' ]
 let g:ediyalam_airline_themes = [ 'light', 'murmur', 'raven', 'silver', 'ubaryd', 'wombat' ]
 
 
+"let g:vimspector_enable_mappings = 'HUMAN'
+
 
 "set runtimepath "~/.vim/"
 syntax on
@@ -163,16 +165,19 @@ function! s:MDUDeclarePlugins()
 		call plug#begin(s:user_vim_directory.'/bundle')
 		 
 		" Make sure you use single quotes
+		"
+		" 
+		Plug 'tpope/vim-commentary'
 
 		"Plug 'startify', { 'type': 'git', 'url': 'https://github.com/mhinz/vim-startify.git' }
 		Plug 'https://github.com/mhinz/vim-startify.git'
 
 		Plug 'vim-scripts/vim-misc', { 'type': 'git', 'url': 'https://github.com/xolox/vim-misc.git' }
 
-		Plug 'kien/ctrlp.vim'
+		"Plug 'kien/ctrlp.vim'
 
-		Plug 'https://github.com/megaannum/self'
-		Plug 'vim-scripts/forms', { 'type': 'git', 'url': 'https://github.com/megaannum/forms.git' }
+		"Plug 'https://github.com/megaannum/self'
+		"Plug 'vim-scripts/forms', { 'type': 'git', 'url': 'https://github.com/megaannum/forms.git' }
 
 		Plug 'vim-scripts/gitv', { 'type': 'git', 'url': 'https://github.com/gregsexton/gitv.git' }
 		Plug 'https://github.com/airblade/vim-gitgutter.git'
@@ -181,10 +186,12 @@ function! s:MDUDeclarePlugins()
 		"Plug 'https://github.com/lornix/vim-scrollbar.git'
 		"Plug 'lornix/vim-scrollbar' "desativé pour l instant
 
-		Plug 'https://github.com/Valloric/YouCompleteMe.git', { 'do' : './install.py --clang-completer' }
+		"Plug 'https://github.com/Valloric/YouCompleteMe.git', { 'do' : './install.py --clang-completer' }
+		Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-		Plug 'https://github.com/majutsushi/tagbar.git'
+		"Plug 'https://github.com/majutsushi/tagbar.git'
 		"Plug 'https://github.com/xolox/vim-easytags.git'
+		Plug 'liuchengxu/vista.vim'
 
 		Plug 'bling/vim-airline'
 		" Takes Snapshot of the prompt
@@ -215,11 +222,12 @@ function! s:MDUDeclarePlugins()
 		Plug 'ericbn/vim-relativize'
 
 		" Plugin outside ~/.vim/plugged with post-update hook
-		"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+		Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 
 		Plug 'martin-der/hih'
 
 		Plug 'vim-scripts/ParseJSON'
+
 
 		Plug 'https://bitbucket.com/martin-der/ediyalam.git'
 
@@ -239,6 +247,8 @@ endfunction
 
 function! ManagerExtrasVimPlug()
 	Plug 'idanarye/vim-vebugger'
+"	Plug 'cpiger/NeoDebug'
+	" Plug 'puremourning/vimspector'
 endfunction
 
 function! MDUFirstInitVim()
@@ -434,6 +444,9 @@ noremap <F6> :EdiyalamDebugStepOver<cr>
 noremap <F7> :EdiyalamDebugStepOut<cr>
 noremap <F8> :EdiyalamDebugStepContinue<cr>
 
+nmap <silent><C-D> gcc
+vmap <silent><C-D> gcc
+
 " ----------------------------------------------------------------
 if &diff
 	set readonly
@@ -474,6 +487,5 @@ map ,hi :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 " Séléctionne le mot pour recherche au double click de la souris
 noremap <2-LeftMouse> *
 
-set mouse=
 let g:airline_section_a='%#__accent_bold#%{airline#util#wrap(airline#parts#mode(),0)}%#__restore__#%{airline#util#append(airline#parts#crypt(),0)}%{airline#util#append(airline#parts#paste(),0)}%{airline#util#append(airline#extensions#keymap#status(),0)}%{airline#util#append(airline#parts#spell(),0)}%{airline#util#append("",0)}%{airline#util#append("",0)}%{airline#util#append(airline#parts#iminsert(),0)}---%{airline#util#wrap(airline#parts#mode(),0)}'
 
