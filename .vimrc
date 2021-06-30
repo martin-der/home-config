@@ -1,11 +1,10 @@
-set nocompatible | filetype indent plugin on | syn on
+set nocompatible | filetype indent plugin on
 
 set t_Co=256
 
-
 " esc in insert mode and command mode
-inoremap kj <esc>
-cnoremap kj <C-C>
+imap kj <esc>
+cmap kj <C-C>
 
 " nvim true color
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -15,7 +14,6 @@ let g:ediyalam_themes = [ 'martin', 'koehler', 'peachpuff' ]
 let g:ediyalam_airline_themes = [ 'light', 'murmur', 'raven', 'silver', 'ubaryd', 'wombat' ]
 
 
-"let g:vimspector_enable_mappings = 'HUMAN'
 
 
 "set runtimepath "~/.vim/"
@@ -161,18 +159,29 @@ function! s:shellExecuteOrDie(commmand)
 	throw 'Execution of '.a:commmand.' failed with return code '.result
 endfunction
 
-function! s:MDUDeclarePlugins()
+function! s:declarePlugins()
 		call plug#begin(s:user_vim_directory.'/bundle')
 		 
 		" Make sure you use single quotes
-		"
-		" 
+
+		" Plug 'https://bitbucket.com/martin-der/ediyalam.git'
+		Plug '~/dev/prog/vim.d/ediyalam'
+ 
+		" Plug 'junegunn/goyo.vim'
+		" Plug 'com/junegunn/limelight.vim'
+
+ 
 		Plug 'tpope/vim-commentary'
 
-		"Plug 'startify', { 'type': 'git', 'url': 'https://github.com/mhinz/vim-startify.git' }
-		Plug 'https://github.com/mhinz/vim-startify.git'
+		Plug 'mhinz/vim-startify'
 
-		Plug 'vim-scripts/vim-misc', { 'type': 'git', 'url': 'https://github.com/xolox/vim-misc.git' }
+		" Plug 'vim-scripts/vim-misc', { 'type': 'git', 'url': 'https://github.com/xolox/vim-misc.git' }
+
+
+		Plug 'skywind3000/vim-quickui'
+	
+
+		Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 
 		"Plug 'kien/ctrlp.vim'
 
@@ -194,6 +203,7 @@ function! s:MDUDeclarePlugins()
 		Plug 'liuchengxu/vista.vim'
 
 		Plug 'bling/vim-airline'
+		" Plug 'itchyny/lightline'
 		" Takes Snapshot of the prompt
 		"Plug 'https://github.com/edkolev/promptline.vim.git' 
 		
@@ -209,7 +219,7 @@ function! s:MDUDeclarePlugins()
 
 		"Required 'vim compatible with python 2.5'
 		"Plug 'https://github.com/sjl/threesome.vim.git'
-
+		Plug 'sjl/splice.vim'
 		"Plug 'http://ftp.stust.edu.tw/vim/runtime/menu.vim', { 'dir', '~/.vim/bundle-manual' }
 
 		Plug 'scrooloose/nerdtree'
@@ -224,12 +234,11 @@ function! s:MDUDeclarePlugins()
 		" Plugin outside ~/.vim/plugged with post-update hook
 		Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 
-		Plug 'martin-der/hih'
+		" Plug 'martin-der/hih'
+		Plug '~/dev/prog/vim.d/hih'
 
 		Plug 'vim-scripts/ParseJSON'
 
-
-		Plug 'https://bitbucket.com/martin-der/ediyalam.git'
 
 		Plug 'posva/vim-vue'
 
@@ -249,6 +258,8 @@ function! ManagerExtrasVimPlug()
 	Plug 'idanarye/vim-vebugger'
 "	Plug 'cpiger/NeoDebug'
 	" Plug 'puremourning/vimspector'
+	Plug 'junegunn/vader.vim' ,{ 'on': ['Grepper', '<plug>(GrepperOperator)'] }
+
 endfunction
 
 function! MDUFirstInitVim()
@@ -270,7 +281,7 @@ function! MDUFirstInitVim()
 	let disabling_file = directory . '/no-manager'
 
 	if ! empty(glob(autoload_dir.'/'.main_file_name))
-		call s:MDUDeclarePlugins()
+		call s:declarePlugins()
 		return 1
 	endif
 
@@ -292,7 +303,7 @@ function! MDUFirstInitVim()
 			else
 				throw "No executable found to download Plugins Manager. Please install one of : curl, wget"
 			endif
-			call s:MDUDeclarePlugins()
+			call s:declarePlugins()
 			if 1 == choice_install_plugins
 				PlugInstall
 				windo redraw!
@@ -364,6 +375,10 @@ let g:startify_skiplist = [
 	\ 'bundle-vundle/.*/doc'
 	\ ]
 
+:nnoremap J ddp
+:nnoremap K ddkP
+
+
 
 """ ******************
 """ * Plugins Config *
@@ -376,12 +391,15 @@ let g:choosewin_overlay_enable          = 1
 "
 let g:airline_exclude_filetypes = ['qf','netrw','diff','undotree','gundo','nerdtree','tagbar', 'vim-plug', 'processes' ]
 
-"let g:airline_section_y="%{airline#util#wrap(airline#parts#ffenc(),0)}"
-let g:airline_section_y="%{airline#util#wrap(airline#parts#ffenc(),0)}"
-"let g:airline_section_a = '%#__accent_bold#%{airline#util#wrap(airline#parts#mode(),0)}%#__restore__#%{airline#util#append(airline#parts#paste(),0)}%{airline#util#append("",0)}%{airline#util#append(airline#parts#iminsert(),0)}'
+let g:airline_section_a = "%#__accent_bold#%{airline#util#wrap(ediyalam#tiers#airline#main#mode(),0)}%#__restore__#%{airline#util#append(airline#parts#crypt(),0)}%{airline#util#append(airline#parts#paste(),0)}%{airline#util#append(airline#extensions#keymap#status(),0)}%{airline#util#append(airline#parts#spell(),0)}%{airline#util#append('',0)}%{airline#util#append('',0)}%{airline#util#append(airline#parts#iminsert(),0)}---%{airline#util#wrap(airline#parts#mode(),0)}"
+let g:airline_section_z = "%{g:airline_symbols.linenr}%#__accent_bold#%l%#__restore__#/%L%{g:airline_symbols.maxlinenr}%#__accent_bold#%v%#__restore__#"
+let g:airline_section_y = "%{airline#util#wrap(ediyalam#tiers#airline#main#ffenc(),0)}"
+let g:airline_section_x = "%#__accent_bold#%{airline#util#prepend(airline#extensions#coc#get_current_function(),0)}%#__restore__#"
+let g:airline_section_x = "%#__accent_bold#%{airline#util#prepend(airline#extensions#coc#get_current_function(),0)}%#__restore__#"
+let g:zairline_section_x = g:airline_section_x . "%{airline#util#prepend('',0)}%{airline#util#prepend(airline#extensions#vista#currenttag(),0)}%{airline#util#prepend('',0)}%{airline#util#prepend('',0)}%{airline#util#prepend('',0)}%{airline#util#prepend('',0)}%{airline#util#wrap(airline#parts#filetype(),0)}"
 
-
-
+let g:quickui_border_style = 6
+let g:quickui_color_scheme = 'solarized'
 
 let g:gitgutter_map_keys = 0
 "let g:gitgutter_diff_args = '-w'
@@ -394,6 +412,7 @@ let g:ctrlp_custom_ignore = {
 let g:ycm_confirm_extra_conf=1
 let g:ycm_extra_conf_globlist = ['~/dev/prog/*','!~/*']
 
+"let g:vimspector_enable_mappings = 'HUMAN'
 
 """ *******************
 """ *     Ediyalam    *
@@ -408,11 +427,10 @@ let g:ediyalam_message_prefix='MduiDE | '
 let g:ediyalam_visual_text_marker_level=1
 let g:ediyalam_visual_tab_width=4
 
-let g:ediyalam_configure_plugins = [ 'airline' ]
+let g:ediyalam_configure_plugins = [ 'airline', 'nerdTree', 'fzf' ]
 
 
 
-nnoremap <silent> <F3> :NERDTreeTabsToggle<CR>
 nnoremap <silent> <F4> :Tagbar<CR>
 
 
@@ -438,11 +456,14 @@ inoremap <silent><F2>ca <ESC>:EdiyalamToggleColorThemeAirline<CR>i
 inoremap <silent><F2>t <ESC>:EdiyalamToggleTabWidth<CR>i
 inoremap <silent><F2>w <ESC>:EdiyalamToggleLineWrap<CR>i
 
+nnoremap <silent> <F3> :EdiyalamNERDTreeTabsGoInOrClose<CR>
 
 noremap <F5> :EdiyalamDebugStepIn<cr>
 noremap <F6> :EdiyalamDebugStepOver<cr>
 noremap <F7> :EdiyalamDebugStepOut<cr>
 noremap <F8> :EdiyalamDebugStepContinue<cr>
+
+noremap <silent><C-B> :call ediyalam#debug#debug#ToggleBreakpointThisLine()<cr>
 
 nmap <silent><C-D> gcc
 vmap <silent><C-D> gcc
@@ -473,6 +494,7 @@ autocmd InsertLeave * :set relativenumber
 au BufWritePost * if getline(1) =~ "^#!" | if &filetype = '' | silent set filetype=sh | endif | endif
 
 au VimEnter * colorscheme martin
+au VimEnter * EdiyalamInit
 
 let g:indentLine_color_term = 239
 let g:indentLine_color_gui = '#09AA08'
@@ -487,5 +509,4 @@ map ,hi :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 " Séléctionne le mot pour recherche au double click de la souris
 noremap <2-LeftMouse> *
 
-let g:airline_section_a='%#__accent_bold#%{airline#util#wrap(airline#parts#mode(),0)}%#__restore__#%{airline#util#append(airline#parts#crypt(),0)}%{airline#util#append(airline#parts#paste(),0)}%{airline#util#append(airline#extensions#keymap#status(),0)}%{airline#util#append(airline#parts#spell(),0)}%{airline#util#append("",0)}%{airline#util#append("",0)}%{airline#util#append(airline#parts#iminsert(),0)}---%{airline#util#wrap(airline#parts#mode(),0)}'
 
