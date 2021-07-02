@@ -412,6 +412,8 @@ let g:ctrlp_custom_ignore = {
 let g:ycm_confirm_extra_conf=1
 let g:ycm_extra_conf_globlist = ['~/dev/prog/*','!~/*']
 
+let NERDTreeRespectWildIgnore=1
+
 "let g:vimspector_enable_mappings = 'HUMAN'
 
 """ *******************
