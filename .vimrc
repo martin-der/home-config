@@ -431,7 +431,7 @@ let g:ediyalam_visual_tab_width=4
 
 let g:ediyalam_configure_plugins = [ 'airline', 'nerdTree', 'fzf' ]
 
-
+set wildignore+=.ediyalam/
 
 nnoremap <silent> <F4> :Tagbar<CR>
 
