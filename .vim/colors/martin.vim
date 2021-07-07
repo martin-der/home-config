@@ -31,7 +31,10 @@ let g:colors_name="martin"
 
 """ Common UI
 
-HI Normal           #ffffff     0       NONE
+HI Normal           #ffffff     -       NONE
+
+hi CursorLine ctermbg=23 guibg=43474A gui=none term=none cterm=none
+hi Visual	ctermbg=235 guibg=#262626 gui=none
 
 if exists('&fillchars') && &fillchars !~# '\Vvert:|'
     HI VertSplit    236     bg      NONE
@@ -105,7 +108,10 @@ HI diffText         bg      174     NONE
 "hi Tooltip
 "
 
-
+hi Pmenu		ctermbg=235 guibg=262626	ctermfg=39	guifg=00afff
+hi PmenuSel		ctermbg=22	guibg=005f00	ctermfg=87	guifg=5fffff
+hi PmenuSbar	ctermbg=235 guibg=262626i
+hi PmenuThumb	ctermbg=235 guibg=262626
 
 hi link vimString	String
 hi vimSetEqual		cterm=NONE		ctermfg=darkred
