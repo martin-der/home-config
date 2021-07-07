@@ -110,8 +110,8 @@ HI diffText         bg      174     NONE
 
 hi Pmenu		ctermbg=235 guibg=262626	ctermfg=39	guifg=00afff
 hi PmenuSel		ctermbg=22	guibg=005f00	ctermfg=87	guifg=5fffff
-hi PmenuSbar	ctermbg=235 guibg=262626i
-hi PmenuThumb	ctermbg=235 guibg=262626
+hi PmenuSbar	ctermbg=52	guibg=5f0000	ctermfg=202	guifg=ff5f00
+hi PmenuThumb	ctermbg=53	guibg=5f005f	ctermfg=203	guifg=ff5f5f
 
 hi link vimString	String
 hi vimSetEqual		cterm=NONE		ctermfg=darkred
