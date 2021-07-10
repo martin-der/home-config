@@ -34,8 +34,6 @@ set encoding=utf-8
 
 set backspace=indent,eol,start
 
-set inccommand=nosplit
-
 "open new buffer bellow new one
 set splitbelow
 
@@ -44,7 +42,7 @@ set laststatus=2
 
 set hlsearch
 set incsearch
-set inccommand=nosplit
+if has('nvim') | set inccommand=nosplit | endif
 
 set scrolloff=1
 
