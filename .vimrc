@@ -491,7 +491,7 @@ autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
 
 " automaticaly set filetype as shell where shebang is found
-au BufWritePost * if getline(1) =~ "^#!" | if &filetype = '' | silent set filetype=sh | endif | endif
+au BufWritePost * if getline(1) =~ "^#!" | if &filetype == '' | silent set filetype=sh | endif | endif
 
 au VimEnter * colorscheme martin
 au VimEnter * EdiyalamInit
