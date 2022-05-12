@@ -12,7 +12,7 @@
 export LOG_LEVEL=info
 
 export MDU_BUP_DIRECTORY="$HOME/dev/prog/BUP"
-export MDU_OPT_DIRECTORY="$HOME/opt/mdu"
+export MDU_OPT_DIRECTORY="/opt/mdu"
 
 
 LD_LIBRARY_PATH="${HOME}/dev/local/lib"
@@ -36,8 +36,9 @@ if [ -d "$HOME/bin" ] ; then
 	}
 fi
 
-if [ -d "$PATH:${MDU_OPT_DIRECTORY}/bin" ] ; then
+if [ -d "${MDU_OPT_DIRECTORY}/bin" ] ; then
 	PATH="$PATH:${MDU_OPT_DIRECTORY}/bin"
+	export PATH
 fi
 
 vim_path="$(which vim)"
