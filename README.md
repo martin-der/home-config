@@ -6,7 +6,7 @@
 ```shell
 cd ~
 git init
-git remote add github https://github.com/martin-der/home-config.git
+git remote add github git@github.com:martin-der/home-config.git
 git pull github master
 ```
 
