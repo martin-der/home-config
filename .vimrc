@@ -494,7 +494,7 @@ autocmd InsertLeave * :set relativenumber
 au BufWritePost * if getline(1) =~ "^#!" | if &filetype == '' | silent set filetype=sh | endif | endif
 
 au VimEnter * colorscheme martin
-au VimEnter * EdiyalamInit
+au VimEnter * if exists(":EdiyalamInit") | EdiyalamInit | endif
 
 let g:indentLine_color_term = 239
 let g:indentLine_color_gui = '#09AA08'
